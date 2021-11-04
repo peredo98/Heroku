@@ -7,7 +7,7 @@ import Logout from "./Logout";
 import SignUp from "./Signup";
 import Login from "./Login";
 import getFirebase from "../firebase/firebaseconfiguration";
-
+import Appbar from "./../components/Appbar"
 export default function Index(props) {
   const firebase = getFirebase();
 
@@ -76,30 +76,45 @@ export default function Index(props) {
   return (
     <Router>
       {props.currentUser ? (
-        <Switch>
-          <Route
-            exact
-            path={"/"}
-            render={() => (
-              // <Dashboard
-              <Main
-                firebase={props.firebase}
-                signupSubmit={signupSubmit}
-                history={props.history}
-              />
-            )}
-          ></Route>
-          <Route
-            path={"/logout"}
-            render={() => (
-              <Logout
-                signOut={signOut}
-                firebase={props.firebase}
-                history={props.history}
-              />
-            )}
-          ></Route>
-        </Switch>
+        <Appbar child={
+          <Switch>
+            <Route
+              exact
+              path={"/"}
+              render={() => (
+                  <Main
+                    currentUser={props.currentUser}
+                    firebase={props.firebase}
+                    signupSubmit={signupSubmit}
+                    history={props.history}
+                  />
+              )}
+            ></Route>
+            <Route
+              exact
+              path={"/dashboard"}
+              render={() => (
+                // <Dashboard
+                  <Dashboard
+                    currentUser={props.currentUser}
+                    firebase={props.firebase}
+                    signupSubmit={signupSubmit}
+                    history={props.history}
+                  />
+              )}
+            ></Route>
+            <Route
+              path={"/logout"}
+              render={() => (
+                <Logout
+                  signOut={signOut}
+                  firebase={props.firebase}
+                  history={props.history}
+                />
+              )}
+            ></Route>
+          </Switch>
+        }/>
       ) : (
         <Switch>
           <Route
