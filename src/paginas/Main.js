@@ -79,7 +79,7 @@ export default function Main(params) {
                 variant="dark"
                 expand="md"
             >
-                <LinkContainer to="/tacos">
+                <LinkContainer to="/nfl">
                     <Navbar.Brand>
                         {" "}
                         <img
@@ -89,20 +89,20 @@ export default function Main(params) {
                             height="30"
                             className="d-inline-block align-top"
                         />{" "}
-                        SAI
+                        Quinielas
                     </Navbar.Brand>
                 </LinkContainer>
 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <LinkContainer to="/tacos">
-                            <Nav.Link>Tacos</Nav.Link>
+                        <LinkContainer to="/nfl">
+                            <Nav.Link>NFL</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/sandwiches">
-                            <Nav.Link>Sandwiches</Nav.Link>
+                        <LinkContainer to="/futbol">
+                            <Nav.Link>Futbol</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/sandwiches">
+                        <LinkContainer to="/futbol">
                             <Nav.Link>{btnActivo}</Nav.Link>
                         </LinkContainer>
                         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
