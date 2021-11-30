@@ -40,7 +40,10 @@ const PickTeamRegular = ({
       userData,
       (value, key) => startsWith(key, `wk`) && typeof value === "string"
     );
-    let filteredPicks = omit(allPicks, [`wk${week}A`, `wk${week}B`]);
+    let filteredPicks = omit(allPicks, [
+      `wk${week}A`, 
+      `wk${week}B`, 
+      ]);
     const teamSelectionsList = Object.values(filteredPicks);
     setPastSelections(teamSelectionsList);
   }, [userData, week]);

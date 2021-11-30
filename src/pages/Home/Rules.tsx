@@ -125,7 +125,6 @@ const Rules = () => {
       </Typography>
       <ul>
         <li>Debes escoger dos equipos por semana</li>
-        <li>En las semanas 4-12, puedes no escoger 4 veces</li>
       </ul>
       <PointsBreakdownTable type="regular" />
       <Typography variant="h4" align="left" gutterBottom>
