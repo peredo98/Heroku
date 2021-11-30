@@ -14,18 +14,7 @@ import Content from "./routes";
 
 const theme = createMuiTheme({
   palette: {
-    primary: {
-      main: "#3d405b",
-    },
-    secondary: {
-      main: "#f50057",
-    },
-    info: {
-      main: "#0b0d23",
-    },
-    background: {
-      default: "#eeeeee",
-    },
+    
   },
 });
 
